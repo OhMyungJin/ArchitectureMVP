@@ -13,9 +13,15 @@ enum NetworkError: Error {
     case decodingFailed
 }
 
+// Entity
+struct numbersapi: Codable {
+    var text: String
+    var number: Int
+    var found: Bool
+    var type: String
+}
+
 class URLManager {
-    
-//    let urlString: String = ("http://numbersapi.com/42?json")
     
     func fetchNumbersapi(completion: @escaping(numbersapi) -> Void) {
         let url = URL(string: "http://numbersapi.com/42?json")!

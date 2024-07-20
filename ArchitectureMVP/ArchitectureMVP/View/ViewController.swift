@@ -7,24 +7,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ViewInterface {
     
     var urlManager: URLManager = URLManager()
+    var presenter: Presenter = Presenter()
     
     @IBOutlet var button: UIButton!
     @IBOutlet var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        presenter.setupView(self)
+        
+        label.numberOfLines = 0
     }
     
     @IBAction func getButton() {
-        DispatchQueue.global(qos: .userInteractive).async {
-            self.urlManager.fetchNumbersapi { data in
-                print(data)
-            }
+        
+        presenter.getNumbersapi()
+    }
+    
+    func fetchText(text: String) {
+        DispatchQueue.main.async {
+            self.label.text = text
         }
+        print("change")
     }
 }
 
