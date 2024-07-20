@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var urlManager: URLManager = URLManager()
+    
     @IBOutlet var button: UIButton!
     @IBOutlet var label: UILabel!
 
@@ -18,7 +20,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getButton() {
-        print("hi")
+        DispatchQueue.global(qos: .userInteractive).async {
+            self.urlManager.fetchNumbersapi { data in
+                print(data)
+            }
+        }
     }
 }
 
