@@ -56,15 +56,47 @@
 		426D1C7F2C4B938C0056329E /* ArchitectureMVP */ = {
 			isa = PBXGroup;
 			children = (
-				426D1C802C4B938C0056329E /* AppDelegate.swift */,
-				426D1C822C4B938C0056329E /* SceneDelegate.swift */,
-				426D1C842C4B938C0056329E /* ViewController.swift */,
-				426D1C862C4B938C0056329E /* Main.storyboard */,
-				426D1C892C4B938D0056329E /* Assets.xcassets */,
-				426D1C8B2C4B938D0056329E /* LaunchScreen.storyboard */,
-				426D1C8E2C4B938D0056329E /* Info.plist */,
+				426D1C972C4B95810056329E /* View */,
+				426D1C962C4B95790056329E /* Presenter */,
+				426D1C952C4B94E80056329E /* Model */,
+				426D1C942C4B949E0056329E /* App */,
 			);
 			path = ArchitectureMVP;
+			sourceTree = "<group>";
+		};
+		426D1C942C4B949E0056329E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				426D1C862C4B938C0056329E /* Main.storyboard */,
+				426D1C8B2C4B938D0056329E /* LaunchScreen.storyboard */,
+				426D1C802C4B938C0056329E /* AppDelegate.swift */,
+				426D1C822C4B938C0056329E /* SceneDelegate.swift */,
+				426D1C8E2C4B938D0056329E /* Info.plist */,
+				426D1C892C4B938D0056329E /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		426D1C952C4B94E80056329E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		426D1C962C4B95790056329E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		426D1C972C4B95810056329E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				426D1C842C4B938C0056329E /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
