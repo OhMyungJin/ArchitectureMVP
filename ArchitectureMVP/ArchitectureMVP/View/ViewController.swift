@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, ViewInterface {
     
-    var urlManager: URLManager = URLManager()
+    // View는 ViewInterface를 채택하고 있고 Presenter을 알고있는 상태!
     var presenter: Presenter = Presenter()
     
     @IBOutlet var button: UIButton!

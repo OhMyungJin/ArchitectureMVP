@@ -21,6 +21,8 @@ struct numbersapi: Codable {
     var type: String
 }
 
+// Usecase?
+// Model은 Presenter도 View도 모르는 상태
 class URLManager {
     
     func fetchNumbersapi(completion: @escaping(numbersapi) -> Void) {
